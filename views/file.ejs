@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/table.css">
+    <script src="https://kit.fontawesome.com/ff8a8ba3fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="home">
+           <a href="/"> <h2><i class="fa-solid fa-house-user"></i> Home</h2></a>
+        </div>
+        <div class="search">
+            <form id="searchForm" action="javascript:search();">
+                <input type="text" id="searchItem" class="form-control" placeholder="Search data...">
+                <button id="go" class="btn btn-default" type="button" onclick="document.getElementById('searchForm').submit();"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            
+        </div>
+        <button class="sort-bt" onclick="sortTable()" >Sort</button>
+        <button class="sort-bt" id="download-bt" onclick="tableToCSV()" ><i class="fa-solid fa-download"></i></button>
+        <button class="sort-bt" id="download-bt" onclick="Export()" ><i class="fa-solid fa-file-pdf"></i></i></button>
+        <div class="total-rows">
+            <h2>Total rows :  <%= csvData.length%></h2>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="content-table" id="myTable">
+            <thead>
+                <tr>
+                    <% for (const [key, value] of Object.entries(csvData[0])) { %>
+                        <th><%= key %></th>
+                     <% } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0;i<csvData.length;i++) { %>
+                    <tr id="row-<%= i %>">
+                        <% for(const [key, value] of Object.entries(csvData[i])) { %>
+                            <td  class="col-md-2"><%= value %></td>
+                        <% } %>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript" src="/js/file.js"></script>
+
+</body>
+</html>

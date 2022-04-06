@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=BIZ+UDPMincho&family=Ubuntu:ital,wght@1,500&display=swap');
+:root {
+    --background : #393E46;
+    --text:#EEEEEE;
+    --button:#FF2E63;
+}
+body{
+    margin: 0;
+	padding: 0;
+    height: 100vh;
+	width: 100vw;
+    position:absolute;
+    background-color: #00ADB5;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 10vh;
+    margin-left: 20vw;
+    max-width: 60vw;
+    /* height: 70vh; */
+    position:relative;
+    border-radius: 15px;
+    background-color: var(--background); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;  
+
+}
+.container div{
+    padding: 20px;
+}
+.header{
+    text-align: center;
+    /* margin-top: 2vh;x */
+    align-items: center;
+}
+.header h1{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    color: var(--text);
+}
+.header p{
+    font-size:large;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--text);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form p{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: 'BIZ UDPMincho', serif;
+    color: var(--text);
+}
+input[type=file]::file-selector-button {
+    /* color: white; */
+    /* border: 2px solid #0c0c0c; */
+    border: none;
+    outline: none;
+    height: 26px;
+    padding: .2em .4em;
+    border-radius: .2em;
+    /* background-color: #ff0000; */
+    transition: 1s;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background-color: var(--button);
+     color: white;
+    /* border: 2px solid #00cec9; */
+  }
+.input-file{
+    border: 1px solid #EEEEEE;
+    display: inline-block;
+    padding: 6px 10px;
+    cursor: pointer;
+    width: 20vw;
+    border-radius: 5px;
+    color: var(--text);
+}
+.submit-button{
+    height: 36px;
+    width: 36px;
+    background-color: var(--button);
+    color: white;
+    border: none;
+    outline: none;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #252A34;
+    height: 9vh;
+    width: 100vw;
+    /* align-items: center; */
+}
+.footer-content{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 3vh;
+}
+a{
+    text-decoration: none;
+    color: var(--text);
+    font-size: large;
+}
+.form a:hover{
+    color: #FF2E63;
+}
+.file-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    height: 150px;
+    overflow-x: scroll;
+    overflow:scroll;
+    width: 300px;
+    background-color: 222831;
+    margin-bottom: 10vh;
+    border-radius: 6px;
+    
+}
+.file-name{
+    margin-top: -5vh;
+    display: flex;
+    flex-direction: row;
+    color: var(--text);
+}
+.file-name .bt{
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 25px;
+    width:80px;
+    border-radius: 6px;
+    /* align-items: center; */
+    /* background-color: #08D9D6;
+    color: #252A34; */
+    color: #06FF00;
+    border: 1px solid #06FF00;
+    text-align: center;
+}
+.bt:hover{
+    background-color: var(--background);
+    background-color: #06FF00;
+    color: black;
+}
+#delete{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    color:#FF1700;
+}

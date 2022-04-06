@@ -1,0 +1,108 @@
+:root {
+    --background : #393E46;
+    --text:#EEEEEE;
+    --button:#FF2E63;
+    --cyan:#08f7fe;
+}
+body{
+    margin: 0;
+	padding: 0;
+    height: 100vh;
+	width: 100vw;
+    background-color: var(--text);
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: var(--background);
+    color: var(--text);
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    height: 5vh;
+}
+.search button{
+    height: 5vh;
+    width: 5vh;
+    background-color: var(--cyan);
+    font-weight: 600;
+    color: var(--background);
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+
+}
+.form-control{
+    width: 30vw;
+    height: 4.7vh;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+.total-rows{
+    margin-right: 5vw;
+    color: #08f7fe;
+}
+a{
+    text-decoration: none;
+    color: var(--cyan);
+    
+}
+.table-container{
+    display: flex;
+    justify-content: center;   
+    margin-top: 5vh;
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 600px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0 ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+}
+.content-table thead tr{
+    background-color: #00ADB5;
+    color: #252A34;
+    text-align: left;
+    font-weight: bold;
+    
+}
+.content-table th, .content-table td{
+    padding: 12px  15px;
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-last-of-type(even){
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #00ADB5;
+}
+.sort-bt{
+    background-color: #08f7fe;
+    color: #252A34;
+    height: 5vh;
+    width: 5vw;
+    margin-top: 2vh;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: large;
+
+}
+#download-bt{
+    width: 3vw;
+    /* color: #FF2E63; */
+    background-color: #FF2E63;
+    color: #FBFFFF;
+}
