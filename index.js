@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));// middleware : it reads the form 
 
 app.use(express.static('./static'));// to access static files
 
-app.use('/uploads',express.static(__dirname+'/uploads')); //accesing uploaded files from uploads folder 
+app.use('/uploads',express.static(__dirname)); //accesing uploaded files from uploads folder 
 
 app.use('/',require('./Routes/index.js'));////using index file of routes for all the routes
 
