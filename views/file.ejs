@@ -27,6 +27,15 @@
             <h2>Total rows :  <%= csvData.length%></h2>
         </div>
     </div>
+    <div class="input-container">
+        <form action="" id="my-form">
+            <% for (const [key, value] of Object.entries(csvData[0])) { %>
+                <input type="text" placeholder=" add <%= key %>">
+             <% } %>
+            <button type="button" onclick="addData()" id="submit-data"> Add data to table</button>
+        </form>
+        
+    </div>
     <div class="table-container">
         <table class="content-table" id="myTable">
             <thead>

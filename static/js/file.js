@@ -1,8 +1,5 @@
 function search() {
     var rows = document.getElementsByTagName('tr');
-    // for(let j = 0;j < rows.length; j++ ){
-    //     rows[j].style.backgroundColor = "white";
-    // }
     var name = document.getElementById("searchForm").elements["searchItem"].value;
     var pattern = name.toLowerCase();
     var targetId = "";
@@ -18,7 +15,16 @@ function search() {
        }
     }  
  }
-
+function addData(){
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var elements = document.getElementsByTagName("input")
+  for (var i = 0; i < elements.length-1; i++) {
+    var cell1 = row.insertCell(0);
+    cell1.innerHTML = elements[elements.length-i-1].value;
+    
+  }        
+}
  function sortTable() {
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("myTable");
@@ -41,6 +47,9 @@ function search() {
       }
     }
   }
+
+
+
   function tableToCSV() {
  
     // Variable to store the final csv data

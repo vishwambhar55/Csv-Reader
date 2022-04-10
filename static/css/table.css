@@ -58,7 +58,7 @@ a{
 .table-container{
     display: flex;
     justify-content: center;   
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 .content-table{
     border-collapse: collapse;
@@ -103,6 +103,33 @@ a{
 #download-bt{
     width: 3vw;
     /* color: #FF2E63; */
+    background-color: #FF2E63;
+    color: #FBFFFF;
+}
+.input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 2vh; */
+    background-color: #222831;
+    height: 10vh;
+}
+.input-container form {
+    margin-top: 3vh;
+}
+.input-container form > input{
+    height: 4vh;
+    /* border: 1px solid #FF2E63; */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+} 
+#submit-data{
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 6px;
     background-color: #FF2E63;
     color: #FBFFFF;
 }
